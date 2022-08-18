@@ -70,7 +70,10 @@ async def meme(ctx):
     meme24,
     meme25,
     ])
-    print(random_meme)
+    embed = discord.Embed(title="Meme", description="Meme Alt Yapısı", color=discord.Colour.green())
+    embed.set_image(url=random_meme)
+    await ctx.channel.send(embed=embed)
+                          
 
 
 client.run("token")
